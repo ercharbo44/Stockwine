@@ -1,0 +1,22 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": "container",
+    "height": 300,
+    "autosize": { "type": "fit", "contains": "padding" },
+    "data": { "name": "table" },
+    "mark": { "type": "bar", "cornerRadiusEnd": 4, "color": "var(--color-brand)" },
+    "encoding": {
+        "y": { "field": "VinRégion", "type": "nominal", "title": null, "sort": "-x" },
+        "x": {
+            "field": "CA net",
+            "type": "quantitative",
+            "title": "CA net (€)",
+            "axis": { "format": "~s" }
+        },
+        "tooltip": [
+            { "field": "VinRégion", "type": "nominal", "title": "Région" },
+            { "field": "CA net", "type": "quantitative", "title": "CA net", "format": ",.0f" },
+            { "field": "Bouteilles", "type": "quantitative", "title": "Bouteilles", "format": ",.0f" }
+        ]
+    }
+}

@@ -1,0 +1,11 @@
+EVALUATE
+TOPN(
+    10,
+    SUMMARIZECOLUMNS(
+        'Vin'[Nom du vin],
+        "CA net", [CA net],
+        "Bouteilles", [Bouteilles vendues]
+    ),
+    [CA net], DESC
+)
+ORDER BY [CA net] DESC

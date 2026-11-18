@@ -1,0 +1,32 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": "container",
+    "height": 280,
+    "autosize": { "type": "fit", "contains": "padding" },
+    "data": { "name": "table" },
+    "transform": [
+        {
+            "calculate": "{'red':'Rouge','white':'Blanc','rose':'Rosé','sparkling':'Effervescent','sweet':'Liquoreux'}[datum.VinCouleur] || datum.VinCouleur",
+            "as": "Couleur"
+        }
+    ],
+    "mark": { "type": "arc", "innerRadius": 60, "cornerRadius": 3, "padAngle": 0.02 },
+    "encoding": {
+        "theta": { "field": "CA net", "type": "quantitative", "stack": true },
+        "color": {
+            "field": "Couleur",
+            "type": "nominal",
+            "title": "Couleur",
+            "scale": {
+                "domain": ["Rouge", "Blanc", "Rosé", "Effervescent", "Liquoreux"],
+                "range": ["#7b1e3b", "#e6c67a", "#e8a0a8", "#c9d6c0", "#c48a2a"]
+            },
+            "legend": { "orient": "right" }
+        },
+        "tooltip": [
+            { "field": "Couleur", "type": "nominal", "title": "Couleur" },
+            { "field": "CA net", "type": "quantitative", "title": "CA net", "format": ",.0f" },
+            { "field": "Bouteilles", "type": "quantitative", "title": "Bouteilles", "format": ",.0f" }
+        ]
+    }
+}

@@ -1,0 +1,49 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": "container",
+    "height": 260,
+    "autosize": { "type": "fit", "contains": "padding" },
+    "data": { "name": "table" },
+    "layer": [
+        {
+            "mark": {
+                "type": "area",
+                "line": { "color": "var(--color-primary)", "strokeWidth": 2 },
+                "opacity": 0.18,
+                "color": "var(--color-primary)",
+                "interpolate": "monotone"
+            },
+            "encoding": {
+                "x": {
+                    "field": "Mois",
+                    "type": "temporal",
+                    "title": null,
+                    "axis": { "format": "%b %y", "grid": false }
+                },
+                "y": {
+                    "field": "CA net",
+                    "type": "quantitative",
+                    "title": "CA net (€)",
+                    "axis": { "format": "~s" }
+                }
+            }
+        },
+        {
+            "mark": {
+                "type": "point",
+                "filled": true,
+                "size": 46,
+                "color": "var(--color-primary)"
+            },
+            "encoding": {
+                "x": { "field": "Mois", "type": "temporal" },
+                "y": { "field": "CA net", "type": "quantitative" },
+                "tooltip": [
+                    { "field": "Mois", "type": "temporal", "title": "Mois", "format": "%B %Y" },
+                    { "field": "CA net", "type": "quantitative", "title": "CA net", "format": ",.0f" },
+                    { "field": "Bouteilles", "type": "quantitative", "title": "Bouteilles", "format": ",.0f" }
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+DEFINE
+    VAR _t =
+        ADDCOLUMNS(
+            SUMMARIZE('Ventes', 'Ventes'[Date de vente]),
+            "Mois", FORMAT('Ventes'[Date de vente], "YYYY-MM")
+        )
+EVALUATE
+GROUPBY(
+    ADDCOLUMNS(
+        _t,
+        "_ca", CALCULATE([CA net]),
+        "_b", CALCULATE([Bouteilles vendues])
+    ),
+    [Mois],
+    "CA net", SUMX(CURRENTGROUP(), [_ca]),
+    "Bouteilles", SUMX(CURRENTGROUP(), [_b])
+)
+ORDER BY [Mois]

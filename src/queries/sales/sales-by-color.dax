@@ -1,0 +1,7 @@
+EVALUATE
+SUMMARIZECOLUMNS(
+    'Vin'[Couleur],
+    "CA net", [CA net],
+    "Bouteilles", [Bouteilles vendues]
+)
+ORDER BY [CA net] DESC

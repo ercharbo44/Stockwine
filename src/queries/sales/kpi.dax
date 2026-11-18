@@ -1,0 +1,9 @@
+EVALUATE
+ROW(
+    "CA net", [CA net],
+    "CA brut", [CA brut],
+    "Bouteilles", [Bouteilles vendues],
+    "Transactions", [# Transactions],
+    "Remises", [Montant des remises],
+    "PMV", [Prix moyen vendu]
+)
