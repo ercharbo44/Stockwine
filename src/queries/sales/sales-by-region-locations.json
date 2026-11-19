@@ -1,0 +1,16 @@
+[
+    { "aliases": ["Alsace"], "longitude": 7.35, "latitude": 48.2 },
+    { "aliases": ["Beaujolais"], "longitude": 4.65, "latitude": 46.15 },
+    { "aliases": ["Bordeaux", "Bordelais"], "longitude": -0.6, "latitude": 44.85 },
+    { "aliases": ["Bourgogne"], "longitude": 4.8, "latitude": 47.15 },
+    { "aliases": ["Champagne"], "longitude": 4.05, "latitude": 49.05 },
+    { "aliases": ["Corse"], "longitude": 9.1, "latitude": 42.15 },
+    { "aliases": ["Jura"], "longitude": 5.65, "latitude": 46.75 },
+    { "aliases": ["Languedoc", "Languedoc-Roussillon"], "longitude": 3.2, "latitude": 43.35 },
+    { "aliases": ["Loire", "Val de Loire", "Vallée de la Loire"], "longitude": 0.6, "latitude": 47.35 },
+    { "aliases": ["Provence"], "longitude": 6.05, "latitude": 43.5 },
+    { "aliases": ["Roussillon"], "longitude": 2.85, "latitude": 42.65 },
+    { "aliases": ["Savoie"], "longitude": 6.05, "latitude": 45.6 },
+    { "aliases": ["Sud-Ouest"], "longitude": 0.9, "latitude": 44.1 },
+    { "aliases": ["Vallée du Rhône", "Rhône", "Vins du Rhône"], "longitude": 4.85, "latitude": 44.8 }
+]

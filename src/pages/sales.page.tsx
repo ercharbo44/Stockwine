@@ -8,10 +8,11 @@ import { PageContainer, PageHeader } from "@/components/layout/page";
 import { KpiCard } from "@/components/ui/kpi-card";
 import { Badge, ErrorBanner } from "@/components/ui/primitives";
 import { ChartPanel } from "@/components/ui/chart-panel";
+import { SalesRegionMap } from "@/components/sales-region-map";
 import { useSemanticModelQuery } from "@/hooks/use-semantic-model-query";
 import { tableToRecords } from "@/lib/fabric-data";
 import { formatEuro0, formatEuro, formatInt } from "@/lib/format";
-import { salesKpi, monthlyRevenue, topWines, salesByRegion, salesByColor } from "@/queries";
+import { salesKpi, monthlyRevenue, topWines, salesByColor } from "@/queries";
 
 function num(v: unknown): number | null {
     if (v == null) return null;
@@ -78,12 +79,7 @@ export function SalesPage() {
                     chart={topWines()}
                     height={320}
                 />
-                <ChartPanel
-                    title="Ventes par région"
-                    description="Répartition du CA net par région viticole."
-                    chart={salesByRegion()}
-                    height={320}
-                />
+                <SalesRegionMap />
             </div>
 
             <div className="grid grid-cols-1 gap-500 lg:grid-cols-2">

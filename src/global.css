@@ -2,6 +2,10 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@utility sales-region-map-height {
+  height: 360px;
+}
+
 /* Bridged tokens — kept in `@theme static` so the CSS vars are always
    emitted, not tree-shaken when no Tailwind utility consumes them.
    Required because <VegaVisual> and <DataGrid> read these at runtime via
