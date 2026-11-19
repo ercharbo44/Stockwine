@@ -11,6 +11,19 @@ Local environment files (`.env`, `.env.*`, and `*.local`), dependencies,
 build output, and local Rayfin deployment state are excluded from Git.
 Configure your own local environment after cloning; never commit credentials.
 
+## Carte des ventes par origine viticole
+
+Dans **Analyse des ventes**, la carte réutilise la requête `sales-by-region.dax`
+et le modèle existant. Les bulles représentent le CA net en valeur absolue ;
+l'infobulle indique le CA signé et les bouteilles vendues. Le contour de France
+est schématique et les repères sont indicatifs : il ne s'agit ni de régions
+administratives, ni de frontières exactes des vignobles, ni de l'adresse des acheteurs.
+Les libellés reconnus et leurs repères se trouvent dans
+`src/queries/sales/sales-by-region-locations.json`. Les origines inconnues ou
+vides ne sont jamais affectées arbitrairement : elles sont signalées et restent
+consultables, avec leurs mesures, dans le détail accessible sous la carte.
+La carte n'utilise aucun service cartographique externe.
+
 ## Prerequisites
 
 1. **Node.js (v22)**: Download and install from https://nodejs.org/dist/v22.22.2/node-v22.22.2-x64.msi
